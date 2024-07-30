@@ -3,15 +3,15 @@
 Changes have been made to the Refine metric-based mesh adaptation code, developed by NASA, to enable the metric intersection of the Spalding law-of-the-wall based metric with any metric derived from a scalar flow field. The repository contains modifications exclusively in the source file ref_subcommand.c. The major changes are detailed as follows:
 
 **1. Addition of New Command:**
-- **Location:** Line 337
+- **Location:** Line 345
 - **Description:** A new command, 'with2matrix', has been introduced. This command performs the metric intersection between two input metrics using the ref_matrix_intersect function.
 
 **2. Modifications to Spalding Metric Function:**
-- **Location:** Line 414
+- **Location:** Line 397
 - **Description:** The spalding_metric function has been modified to write out the metric in .solb format, based on the Spalding u+ formulation, which is created in the backend of the original code.
 
 **3. Loop Adjustment:**
-- **Location:** Line 1133
+- **Location:** Line 1075
 - **Description:** The spalding_metric function has been extracted from the loop that performs multiple iterations of adaptation near the boundary layer. This adjustment ensures consistency in the number of base meshes between the Spalding metric and the scalar metric.
 
 ## Compilation
